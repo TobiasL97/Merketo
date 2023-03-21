@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    color: $color-dark-6;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}

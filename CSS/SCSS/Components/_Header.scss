@@ -1,0 +1,105 @@
+header {
+
+    .container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+
+        .navbar {
+
+            position: relative;
+
+
+            .navbar-links {
+                display: none;
+        
+        
+                @include lg {
+                    display: flex;
+                }
+        
+                .nav-link {
+                    font-weight: $font-poppins;
+                    margin-right: 40px;
+                    transition: ease-in-out 0.2s;
+    
+                    &:hover {
+                        color: $color-red-1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        
+            .navbar-icons {
+                display: none;
+        
+                @include lg {
+                    display: block;
+                }
+    
+                .nav-icon {
+                    color: $color-dark-2;
+                    margin-right: 15px;
+    
+                    transition: ease-in-out 0.2s;
+    
+                    &:hover {
+                        color: $color-red-1;
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            .hamburger-icon {
+                border: none;
+                background-color: transparent;
+                font-size: 25px;
+        
+                @include lg {
+                    display: none;
+                }
+            }
+    
+            #hamburger-menu {
+                position: absolute;
+                flex-direction: column;
+                display: flex;
+                left: 15vw;
+                top: -12px;
+                width: 70vw;
+                height: 100vh;
+                padding-top: 23px;
+                box-shadow: -1px 10px 30px $color-dark-1;
+                background-color: white;
+
+                display: none;
+
+                &:active {
+                    right: -20px;
+                }
+
+
+
+                .close {
+                    
+                    width: 40px;
+                    padding: 10;
+                    margin-bottom: 50px;
+                    font-size: 20px;
+                    border: none;
+                    background-color: white;
+                }
+
+                .hamburger-menu-link {
+                    display: block;
+                    margin: 10px;
+                    color: $color-dark-6;
+                }
+            }
+        }
+
+
+    }
+}
