@@ -13,3 +13,168 @@ html, body {
 a {
     text-decoration: none;
 }
+
+// Price
+.current-price {
+    color: $color-dark-4;
+    
+}
+
+.original-price {
+    color: $color-dark-4;
+    text-decoration: line-through;
+}
+
+
+// Product Card 
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        cursor: pointer;
+
+        .product-card-details {
+
+            .add-to-cart {
+                opacity: 100%;
+            }
+        }
+    }
+    
+    .product-card-details {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .add-to-cart {
+            opacity: 100%;
+            color: $color-black;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+                color: $color-red-1;
+                cursor: pointer;
+            }
+
+            @include lg {
+                opacity: 0%;
+            }
+        }
+
+        .product-card-pricetags {
+            display: flex;
+
+            >.original-price {
+                margin: 0px;
+            }
+
+            >.current-price {
+                margin: 0px 0px 0px 10px;
+            }
+        }
+    }
+
+    > h1 {
+        font-size: 16px;
+        font-family: $font-poppins;
+        font-weight: $font-weight-medium;
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+        @include lg {
+            font-size: 18px;
+        }
+    }
+
+    .product-card-image {
+        width: 100%;
+        
+    }
+}
+
+// Product Card Big
+.product-card-big {
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+
+        .product-card-big-content {
+
+            .product-card-big-details {
+            
+                .add-to-cart {
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+
+    .product-card-big-image {
+        width: 100%;
+    }
+
+    .product-card-big-content {
+
+        background-color: white;
+        padding: 15px;
+
+        > h1 {
+            font-size: 16px;
+            font-family: $font-poppins;
+            font-weight: $font-weight-medium;
+            margin-top: 10px;
+            margin-bottom: 15px;
+
+            @include lg {
+                font-size: 18px;
+            }
+        }
+    
+        .product-card-big-details {
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+    
+    
+            .product-card-big-pricetags {
+                display: flex;
+    
+    
+                >.original-price {
+                    margin: 0px;
+                }
+        
+                >.current-price {
+                    margin: 0px 0px 0px 20px;
+                }
+            }
+
+            >.add-to-cart {
+
+                opacity: 100%;
+                color: #AAAAAA;
+                font-size: 24px;
+                margin-right: 10px;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    color: $color-red-1;
+                    cursor: pointer;
+                }
+    
+                @include lg {
+                    opacity: 0%;
+                }
+            }
+        }
+
+    }
+}

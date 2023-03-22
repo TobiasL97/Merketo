@@ -37,42 +37,31 @@
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
-            gap: 10px;
+            gap: 20px;
 
             @include lg {
                 grid-template-columns: repeat(auto-fit, minmax(270px, 4fr));
+                gap: 50px;
             }
+        }
 
-            .product-card {
-                width: 150px;
-                margin: auto;
+        .load-more-btn {
+            text-align: center;
+            padding-top: 40px;
 
-                @include lg {
-                    width: 270px;
-                }
+            >button {
+                border: 1px solid $color-dark-6;
+                color: $color-dark-6;
+                background-color: transparent;
+                font-family: $font-poppins;
+                font-size: 16px;
+                padding: 10px 30px;
 
-                > h1 {
-                    font-size: 18px;
-                    font-family: $font-poppins;
-                    font-weight: $font-weight-medium;
-                    margin-top: 8px;
-                    margin-bottom: 5px;
-                }
-
-                > p {
-                    color: $color-dark-4;
-                    
-                }
-
-                .product-card-image {
-                    max-width: 100%;
-                    object-fit: contain;
-
-                    @include lg {
-                        object-fit: none;
-                    }
+                > i {
+                    margin-left: 10px;
                 }
             }
         }
+
     }
 }
