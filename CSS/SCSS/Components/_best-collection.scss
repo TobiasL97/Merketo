@@ -1,16 +1,78 @@
 .best-collection {
 
-
     >.container {
-        padding-top: 80px;
+        padding-top: 40px;
+
+        @include lg {
+            padding-top: 80px;
+        }
 
         .best-collection-header {
             text-align: center;
+            font-size: 30px;
+            font-weight: $font-weight-semibold;
+            margin-bottom: 45px;
+
+            @include lg {
+                font-size: 48px;
+            }
         }
 
         .best-collection-tags {
-            display: flex;
+            display: none;
             justify-content: center;
+            margin-bottom: 50px;
+
+            @include lg {
+                display: flex;
+            }
+
+            .best-collection-tag {
+                margin-right: 10px;
+                font-family: $font-roboto;
+                color: $color-dark-4;
+            }
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
+            gap: 10px;
+
+            @include lg {
+                grid-template-columns: repeat(auto-fit, minmax(270px, 4fr));
+            }
+
+            .product-card {
+                width: 150px;
+                margin: auto;
+
+                @include lg {
+                    width: 270px;
+                }
+
+                > h1 {
+                    font-size: 18px;
+                    font-family: $font-poppins;
+                    font-weight: $font-weight-medium;
+                    margin-top: 8px;
+                    margin-bottom: 5px;
+                }
+
+                > p {
+                    color: $color-dark-4;
+                    
+                }
+
+                .product-card-image {
+                    max-width: 100%;
+                    object-fit: contain;
+
+                    @include lg {
+                        object-fit: none;
+                    }
+                }
+            }
         }
     }
 }
