@@ -1,0 +1,16 @@
+.best-collection {
+
+
+    >.container {
+        padding-top: 80px;
+
+        .best-collection-header {
+            text-align: center;
+        }
+
+        .best-collection-tags {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.showcase {
+    background-color: #F3F2F2;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    .container {
+        @include lg {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .showcase-text {
+            text-align: center;
+
+            @include lg {
+                text-align: start;
+            }
+
+            .showcase-header {
+                font-family: $font-poppins;
+                font-size: 16px;
+                margin-bottom: 10px;
+
+                @include sm {
+                    font-size: 18px;
+                }
+
+
+            }
+
+            .showcase-paragraph {
+                font-family: $font-poppins;
+                font-weight: $font-weight-bold;
+                font-size: 30px;
+                margin-bottom: 30px;
+
+                @include sm {
+                    font-size: 40px;
+                }
+
+                @include md {
+                    font-size: 60px;
+                }
+
+                @include lg {
+                    font-size: 50px;
+                    max-width: 80%;
+                }
+
+                @include xl {
+                    font-size: 60px;
+                    max-width: 90%;
+                }
+
+                @include xxl {
+                   
+                    max-width: 80%;
+                }
+            }
+
+            .showcase-button {
+                border: none;
+                color: white;
+                font-family: $font-poppins;
+                font-size: 14px;
+                background-color: $color-red-1;
+                padding: 10px 20px;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    background-color: #9e1e31;
+                    cursor: pointer;
+                }
+
+                @include lg {
+                    padding: 10px 40px;
+                }
+
+                @include xl {
+                    padding: 15px 50px;
+                }
+            }
+        }
+
+        .showcase-image {
+            display: none;
+
+
+            @include lg {
+                display: block;
+                width: 40%;
+            }
+
+            @include xl {
+                width: 50%;
+            }
+        }
+    }
+}
