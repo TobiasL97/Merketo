@@ -1,0 +1,59 @@
+.top-selling {
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+
+
+    @include lg {
+        padding-top: 90px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .top-selling-header {
+        text-align: center;
+        font-family: $font-poppins;
+        font-size: 20px;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 45px;
+
+        @include sm {
+            font-size: 24px;
+        }
+
+        @include md {
+            font-size: 30px;
+            margin-bottom: 90px;
+        }
+    }
+
+    .top-selling-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 6fr));
+        gap: 20px;
+        margin-bottom: 40px;
+
+        @include lg {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 6fr));
+            gap: 30px;
+        }
+    }
+
+    .arrow-buttons {
+        text-align: center;
+        display: none;
+
+        >button {
+            background-color: transparent;
+            border: 1px solid $color-dark-5;
+            border-radius: 5px;
+            padding: 5px 12px;
+            margin: 5px;
+        }
+
+        @include lg {
+            display: block;
+        }
+    }
+}
