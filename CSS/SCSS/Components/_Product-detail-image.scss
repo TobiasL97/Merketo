@@ -1,0 +1,12 @@
+.product-detail-image {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url('/IMAGES/1920x300.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    
+    @include lg {
+        display: block;
+    }
+}
