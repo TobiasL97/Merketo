@@ -1,0 +1,31 @@
+.products {
+
+    .container {
+
+        .new-product {
+            text-align: right;
+
+            > button {
+                border: none;
+                background-color: $color-red-1;
+                color: white;
+                padding: 7px 15px;
+                border-radius: 5px;
+            }
+        }
+
+        .product-list {
+            display: flex;
+            align-items: center;
+        
+            border: 1px solid rgb(194, 194, 194);
+
+            .product-list-item {
+                margin: 0px 0px 0px 0px;
+                border-left: 1px solid rgb(194, 194, 194);
+                border-right: 1px solid rgb(194, 194, 194);
+                height: 100%;
+            }
+        }
+    }
+}
